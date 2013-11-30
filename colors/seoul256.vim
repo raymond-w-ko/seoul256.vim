@@ -135,10 +135,10 @@ function! s:hi(item, fg, bg)
   let bg = a:bg[s:style_idx] > 255 ? 231 : a:bg[s:style_idx]
 
   if !empty(fg)
-    execute printf("highlight %s ctermfg=%s guifg=%s", a:item, fg, s:rgb_map[fg])
+    execute printf("highlight %s ctermfg=%s guifg=%s gui=NONE", a:item, fg, s:rgb_map[fg])
   endif
   if !empty(bg)
-    execute printf("highlight %s ctermbg=%s guibg=%s", a:item, bg, s:rgb_map[bg])
+    execute printf("highlight %s ctermbg=%s guibg=%s gui=NONE", a:item, bg, s:rgb_map[bg])
   endif
 endfunction
 
